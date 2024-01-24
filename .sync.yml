@@ -1,0 +1,28 @@
+---
+.rubocop.yml:
+  default_configs:
+    AllCops:
+      TargetRubyVersion: '2.7'
+      NewCops: enable
+.gitignore:
+  paths:
+    - .modules/
+    - .resource_types/
+    - bolt-debug.log
+    - .plan_cache.json
+    - .plugin_cache.json
+    - .task_cache.json
+    - .rerun.json
+    - .terraform/
+    - .terraform*lock.hcl
+    - Puppetfile
+.pdkignore:
+  paths:
+    - /.*.yml
+    - /pdk.yaml
+    - /.pmtignore
+    - /.git*
+    - /.editorconfig
+    - /provision.yaml
+    - /*.log
+    - /.rerun.json

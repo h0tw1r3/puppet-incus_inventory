@@ -1,0 +1,19 @@
+---
+groups:
+  - name: containers
+    targets:
+      - _plugin: incus_inventory
+        filter: type eq container
+  - name: virtual machines
+    targets:
+      - _plugin: incus_inventory
+        filter: type eq virtual-machine
+        target_mapping:
+          name: name
+          alias: state.network.nic0.addresses.0.address
+          vars:
+            arch: architecture
+  - name: debian instances
+    targets:
+      - _plugin: incus_inventory
+        filter: config.image.os eq Debian

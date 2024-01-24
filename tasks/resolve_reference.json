@@ -1,0 +1,40 @@
+{
+  "description": "Generate targets from Incus or LXD",
+  "files": [
+    "ruby_task_helper/files/task_helper.rb",
+    "ruby_plugin_helper/lib/plugin_helper.rb"
+  ],
+  "input_method": "stdin",
+  "parameters": {
+    "provider": {
+      "type": "Optional[Enum['incus', 'lxd']]",
+      "description": "which service to use, prefers incus if unset"
+    },
+    "remote": {
+      "type": "Optional[String]",
+      "description": "name of remote in configuration"
+    },
+    "filter": {
+      "type": "Optional[String]",
+      "description": "instances collection filter passed directly to api call"
+    },
+    "project": {
+      "type": "Optional[String]",
+      "description": "limit instances to specific project"
+    },
+    "all_projects": {
+      "type": "Boolean",
+      "description": "query all projects",
+      "default": false
+    },
+    "target_mapping": {
+      "type": "Hash",
+      "description": "target attributes to populate with resource values",
+      "default": {
+        "name": "name",
+        "alias": "state.network.nic0.addresses.0.address"
+      }
+    }
+  },
+  "private": true
+}
