@@ -19,6 +19,7 @@
 /spec/fixtures/modules/*
 /tmp/
 /vendor/
+/.vendor/
 /convert_report.txt
 /update_report.txt
 .DS_Store
@@ -26,13 +27,15 @@
 .envrc
 /inventory.yaml
 /spec/fixtures/litmus_inventory.yaml
+.resource_types
+.modules
+.task_cache.json
+.plan_cache.json
+.rerun.json
+bolt-debug.log
 .modules/
 .resource_types/
-bolt-debug.log
-.plan_cache.json
 .plugin_cache.json
-.task_cache.json
-.rerun.json
 .terraform/
 .terraform*lock.hcl
 Puppetfile

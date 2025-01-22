@@ -10,25 +10,17 @@
   "dependencies": [
     {
       "name": "puppetlabs-ruby_plugin_helper",
-      "version_requirement": ">= 0.1.0 < 1.0.0"
+      "version_requirement": ">= 0.1.0 <= 2.0.0"
     },
     {
       "name": "puppetlabs-ruby_task_helper",
-      "version_requirement": ">= 0.4.0 < 1.0.0"
+      "version_requirement": ">= 0.4.0 <= 2.0.0"
     }
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "CentOS",
-      "operatingsystemrelease": [
-        "8",
-        "9"
-      ]
-    },
-    {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "10",
         "11",
         "12"
       ]
@@ -37,7 +29,8 @@
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "20.04",
-        "22.04"
+        "22.04",
+        "24.04"
       ]
     }
   ],
@@ -54,7 +47,7 @@
     "bolt",
     "inventory"
   ],
-  "pdk-version": "3.0.1",
-  "template-url": "pdk-default#3.0.1",
-  "template-ref": "tags/3.0.1-0-gd13288a"
+  "pdk-version": "3.4.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#3.4.0",
+  "template-ref": "tags/3.4.0-0-gd3cc13f"
 }
